@@ -1,0 +1,31 @@
+<mdc-form live-validation validate>
+	<mdc-service-layout>
+		<div slot="content">
+			<div class="pageTitle">
+				{{fixed-title}}
+			</div>
+			<div class="pageDescription">
+				{{fixed-description}}
+			</div>
+
+			<div class="modusSelection">
+				Fixed 
+			</div>
+
+			<mdc-form-success redirect="modusPerimeterView">
+			</mdc-form-success>
+
+		</div>
+		<div slot="footer">
+			<div class="button-wrapper">
+				<mdc-service-page-navigation page="modusSelectionView" class="button50">
+					<mdc-button type="gray" label="{{buttons-close}}"></mdc-button>
+				</mdc-service-page-navigation>
+
+				<mdc-form-submit class="button50">
+					<mdc-button type="next" label="{{buttons-continue}}"></mdc-button>
+				</mdc-form-submit>
+			</div>
+		</div>
+	</mdc-service-layout>
+</mdc-form>

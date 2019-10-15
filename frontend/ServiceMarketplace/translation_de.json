@@ -1,0 +1,20 @@
+{
+  "buttons-back": "Zurück",
+  "buttons-close": "Schließen",
+  "buttons-continue": "Weiter",
+  "main-headline": "Tankerkönig Spritpreis",
+  "modus-title": "Modus Auswahl",
+  "modus-description": "Bitte wählen Sie den Modus aus, in dem Sie das Widget nutzen wollen.",
+  "modus-perimeter": "Günstigster Preis in einem Umkreis",
+  "modus-fixedStation": "Preis einer Tankstelle anzeigen",
+  "final-title": "Fertig!",
+  "final-description": "Sie haben das Widget fertig eingerichtet. Fügen Sie nun das Widget auf Ihren Dashboard hinzu.",
+  "perimeter-title": "Auswahl eines Umkreises",
+  "perimeter-description": "Bitte wählen Sie Koordinaten und einen geeigneten Umkreis für die Suche aus",
+  "perimeter-radius": "Umkreis in km",
+  "gas-e5": "E5",
+  "gas-e10": "E10",
+  "gas-diesel": "Diesel",
+  "gas-all": "Alle",
+  "gas-label": "Bitte wählen Sie eine Spritsorte"
+}

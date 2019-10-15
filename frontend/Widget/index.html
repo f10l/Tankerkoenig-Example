@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tankerkönig Widget</title>
+</head>
+
+<style>
+  .result {
+    display: none;
+  }
+
+  .showPrice {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+</style>
+
+<body>
+
+<div class="result">
+  <div>
+  Wir haben den Besten Preis für dich ermittelt!
+  </div>
+
+  <div>
+  <p><strong>Tankstelle: </strong>: <span class="station"></p>
+  <p>Der Sprit Preis ist: <span class="showPrice"></span></p>
+  </div>
+
+</div>
+
+<div class="loading">
+Laden ...
+</div>
+<script>
+  async function getWidgetValues() {
+    try {
+      const call = await mydaco.call.getPerimeterPrice();
+      console.log(call);
+      const station = call.result.bestPrice;
+      console.log(station);
+
+      const stationString = `${station.brand} - ${station.street} ${station.houseNumber}`;
+
+      document.querySelector('.result').style.display = 'block';
+      document.querySelector('.loading').style.display = 'none';
+
+      document.querySelector('.station').innerText = stationString;
+      document.querySelector('.showPrice').innerText = station.price + ' €';
+
+    } catch(e) {
+      console.log(e);
+    }
+  }
+
+  getWidgetValues();
+</script>
+
+</body>
+</html>

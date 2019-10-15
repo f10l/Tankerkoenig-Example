@@ -1,0 +1,55 @@
+<style>
+	.geoloc {
+		width: 300px;
+		margin-top: 20px;
+	}
+</style>
+
+<mdc-form live-validation validate>
+	<mdc-service-layout>
+		<div slot="content">
+			<div class="pageTitle">
+				{{perimeter-title}}
+			</div>
+			<div class="pageDescription">
+				{{perimeter-description}}
+			</div>
+
+			<div class="geoloc">
+				<mdc-geolocation required name="perimeterCoords" persist="w">
+
+				</mdc-geolocation>
+
+				<mdc-input required init-value="5" type="number" name="rad" persist="rw" label="{{perimeter-radius}}" min="1"
+					max="30">
+				</mdc-input>
+
+				<mdc-selection label="{{gas-label}}" persist="rw" required radio name="gasSelection">
+					<mdc-selection-option name="e5">{{gas-e5}}
+					</mdc-selection-option>
+					<mdc-selection-option name="e10">{{gas-e10}}
+					</mdc-selection-option>
+					<mdc-selection-option name="diesel">{{gas-diesel}}
+					</mdc-selection-option>
+					<mdc-selection-option name="all">{{gas-all}}
+					</mdc-selection-option>
+				</mdc-selection>
+			</div>
+
+			<mdc-form-success redirect="finalView">
+			</mdc-form-success>
+
+		</div>
+		<div slot="footer">
+			<div class="button-wrapper">
+				<mdc-service-page-navigation page="modusSelectionView" class="button50">
+					<mdc-button type="gray" label="{{buttons-back}}"></mdc-button>
+				</mdc-service-page-navigation>
+
+				<mdc-form-submit class="button50">
+					<mdc-button type="next" label="{{buttons-continue}}"></mdc-button>
+				</mdc-form-submit>
+			</div>
+		</div>
+	</mdc-service-layout>
+</mdc-form>

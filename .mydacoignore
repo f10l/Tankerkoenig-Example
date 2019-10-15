@@ -1,0 +1,8 @@
+# Please edit this file according to your needs. It follows gitignore syntax and rules https://git-scm.com/docs/gitignore .
+
+# Do not remove mydacoConfig.json. This file is created locally and contains your cliToken, which authorizes the CLI to synchronize with a specific action version.
+mydacoConfig.json
+
+# Ignore all node_modules except they are in the action folder. node_modules in the action folder need to be synchronized, because it contains the build of the action (backend)
+node_modules
+!/action/**

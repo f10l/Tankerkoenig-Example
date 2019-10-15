@@ -1,0 +1,13 @@
+{
+  "main": "action/index.js",
+  "devDependencies": {
+    "@mydaco/mydaco-scripts": "0.0.2"
+  },
+  "scripts": {
+    "sync": "node node_modules/@mydaco/mydaco-scripts/src/index.js sync",
+    "download": "node node_modules/@mydaco/mydaco-scripts/src/index.js download",
+    "download:skip": "node node_modules/@mydaco/mydaco-scripts/src/index.js download --skip",
+    "upload": "node node_modules/@mydaco/mydaco-scripts/src/index.js upload",
+    "change": "node node_modules/@mydaco/mydaco-scripts/src/index.js change"
+  }
+}
